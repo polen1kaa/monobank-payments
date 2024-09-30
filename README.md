@@ -60,7 +60,16 @@ Webhook server is set automatically when the payment link is generated. Please n
 It is difficult to implement a system of hash and its verification. Therefore I suggest you to write down the amount of payment and its ID in advance to check it.
 ```php
 <?php
-# Needed for webhook notifications to work properly.
+
+/*
+Check from which IP addresses the notification was sent.
+IP addresses are current as of 09/30/2024.
+It is better to ask for a new list of IP addresses from which notifications will be sent to the bank's support.
+*/
+
+if(!in_array($_SERVER['REMOTE_ADDR'], ["35.158.251.173", "35.158.31.50", "52.58.160.42", "35.158.201.27"])){
+    die("You don't have to see this. Do you understand?");
+}
 if($_SERVER["REQUEST_METHOD"] === "GET"){
     die("OK");
 }else if($_SERVER["REQUEST_METHOD"] === "POST"){
