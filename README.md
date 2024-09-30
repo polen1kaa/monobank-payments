@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     In yours, most likely, getting strings from MySQL and checking their count.
     */
 
-    if($request["data"]["statementItem"]["comment"] == $label){
+    if($label == $request["data"]["statementItem"]["comment"]){
         if($amount == $_REQUEST['data']['statementItem']["amount"] OR $payment["data"] == $_REQUEST['data']['statementItem']["amount"]){
 
             /*
