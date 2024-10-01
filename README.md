@@ -20,7 +20,7 @@ Copy the monobank.php file to the directory with your project
   mv monobank.php /var/www/html
 ```
 
-[Enable HTTP notifications](https://yoomoney.ru/transfer/myservices/http-notification) from YooMoney and generate a secret word for Webhook
+[Enable HTTP notifications](https://yoomoney.ru/transfer/myservices/http-notification) and generate a secret word for Webhook
 [Get an X-Token](https://api.monobank.ua/) to work with the API and [create any jar in the Monobank app](https://www.prostobank.ua/depozity/novosti/banka_ot_monobank).
 ## Usage
 
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 
     /*
     Checking the availability of payment on your website.
-    In my case, the usual if a == b.
+    In my case, if a == b.
     In yours, most likely, getting strings from MySQL and checking their count.
     */
 
